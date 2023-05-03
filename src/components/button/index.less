@@ -1,0 +1,30 @@
+@import "@/styles";
+
+.button {
+  transition: 0.3s opacity;
+  border-radius: 4px;
+  display: inline-block;
+  color: @white;
+  background-color: @pink;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
+  padding: 14px 22px;
+  text-decoration: none;
+  text-align: center;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+
+  .tablet({
+    font-size: 25px;
+    padding: 14px 28px;
+  });
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:focus-visible {
+    outline-offset: 2px;
+    outline: 2px solid @flower;
+  }
+}

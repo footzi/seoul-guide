@@ -1,0 +1,92 @@
+@import "@/styles";
+
+.firstscreen {
+  .layout();
+  .grid();
+  margin-top: 85px;
+  margin-bottom: 53px;
+
+  .tablet({
+    margin-top: 117px;
+    margin-bottom: 126px;
+  });
+
+  .desktop({
+    margin-bottom: 187px;
+  });
+
+  &__title {
+    .text-size-1();
+    .col(24);
+    text-align: center;
+
+    .tablet({
+      .col(12, 2);
+      text-align: left;
+      padding-top: 24px;
+    });
+
+    .desktop({
+      .col(12, 3);
+      padding-top: 48px;
+    });
+  }
+
+  &__description {
+    .text-size-2();
+    .col(18, 4);
+    text-align: center;
+    margin-top: 45px;
+
+    .tablet({
+      .col(12, 2);
+      margin-top: 30px;
+      text-align: left;
+    });
+
+    .desktop({
+      .col(12, 3);
+    });
+  }
+
+  &__image-wrapper {
+    .col(16, 5);
+    display: flex;
+    position: relative;
+    margin-top: 32px;
+
+    .tablet({
+      .col(10, 14);
+      margin-top: 0;
+    });
+
+    .desktop({
+      .col(8, 15);
+    });
+  }
+
+  &__image {
+    width: 100%;
+    max-width: 370px;
+    display: block;
+
+    .tablet({
+      position: absolute;
+      right: 0;
+    });
+  }
+
+  &__button {
+    .col(18, 4);
+    margin-top: 31px;
+
+    .tablet({
+      .col(10, 2);
+    });
+
+    .desktop({
+      .col(6, 3);
+      margin-top: 63px;
+    });
+  }
+}

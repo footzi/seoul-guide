@@ -1,0 +1,84 @@
+@import "@/styles";
+
+.author {
+  .layout();
+  .grid();
+  margin-top: 62px;
+
+  .tablet({
+    margin-top: 96px;
+  });
+
+  .desktop({
+    margin-top: 123px;
+  });
+
+  &__title {
+    .text-size-3();
+    .col(24);
+    font-weight: 500;
+    text-align: center;
+  }
+
+  &__picture {
+    .col(20, 3);
+    margin-top: 26px;
+
+    .tablet({
+      .col(9, 15);
+      order: 1;
+      margin-top: 85px;
+    });
+
+    .desktop({
+      .col(7, 16);
+    });
+
+    img {
+      width: 100%;
+      display: block;
+    }
+  }
+
+  &__content {
+    .col(21, 3);
+    margin-top: 70px;
+
+    .tablet({
+      .col(13, 2);
+      margin-top: 50px;
+    });
+
+    .desktop({
+      .col(12, 3);
+    })
+  }
+
+  &__text {
+    .text-size-4();
+    text-align: center;
+
+    .tablet({
+      text-align: left;
+    });
+
+    p:not(:last-child) {
+      margin-bottom: 18px;
+
+      .tablet({
+        margin-bottom: 24px;
+      })
+    }
+  }
+
+  &__link {
+    .text-size-5();
+    margin-top: 60px;
+    font-weight: 300;
+    font-style: italic;
+
+    .tablet({
+      margin-top: 50px;
+    });
+  }
+}

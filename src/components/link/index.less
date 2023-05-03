@@ -1,0 +1,29 @@
+@import "@/styles";
+
+.link {
+  .text-size-5();
+  transition: 0.3s color;
+  text-decoration: none;
+  color: @grey;
+
+  &:hover {
+    color: @pink;
+    text-decoration: underline;
+  }
+
+  &_theme_underline {
+    text-decoration: underline;
+  }
+
+  &_theme_italic {
+    font-style: italic;
+  }
+
+  &_theme_color {
+    color: @pink;
+
+    &:hover {
+      color: @grey;
+    }
+  }
+}

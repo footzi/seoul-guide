@@ -1,0 +1,43 @@
+@import "@/styles";
+
+.mobile-menu {
+  display: none;
+
+  &.is-show {
+    display: block;
+
+    .tablet({
+      display: none;
+    });
+  }
+
+  &.is-animate {
+    .mobile-menu__content {
+      transform: translateX(0);
+    }
+
+    .mobile-menu__overlay {
+      opacity: 0.2;
+    }
+  }
+
+  &__content {
+    width: 100%;
+    height: 100vh;
+    transform: translateX(100%);
+    transition: 0.3s transform;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    background: @white;
+    padding: 62px 32px;
+    overflow-y: auto;
+  }
+
+  &__list {
+    li {
+      margin-bottom: 12px;
+    }
+  }
+}

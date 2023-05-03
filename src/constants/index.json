@@ -1,0 +1,21 @@
+{
+  "email": "moneyhamsterask@gmail.com",
+  "domain": "https://moneyhamster.ru",
+  "instagram": "http://https://www.instagram.com/",
+  "sections": {
+    "about": "/#about",
+    "author": "/#author",
+    "price": "/#price"
+  },
+  "pages": {
+    "home": "/",
+    "agreements": "/agreements.html",
+    "privacyPolicy": "/privacy-policy.html",
+    "app": "/app",
+    "signup": "/app/signup",
+    "login": "/app/login",
+    "settings": "/app/settings"
+  },
+  "price": 499,
+  "year": "2023"
+}

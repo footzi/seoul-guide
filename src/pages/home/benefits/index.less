@@ -1,0 +1,71 @@
+@import "@/styles";
+
+.benefits {
+  background-color: @flower;
+  padding-top: 58px;
+  padding-bottom: 185px;
+
+  .tablet({
+    padding-top: 78px;
+    padding-bottom: 132px;
+  });
+
+  .desktop({
+    padding-top: 97px;
+    padding-bottom: 158px;
+  });
+
+  &__content {
+    .layout();
+    .grid();
+  }
+
+  &__block {
+    .col(20, 3);
+
+    &:nth-child(odd) {
+      .tablet({
+        .col(11, 2);
+      });
+
+      .desktop({
+        .col(9, 3);
+      });
+    }
+
+    &:nth-child(even) {
+      .tablet({
+        .col(11, 13);
+      });
+
+      .desktop({
+        .col(9, 14);
+      });
+    }
+
+    &:not(&:last-child) {
+      margin-bottom: 36px;
+
+      .tablet({
+        margin-bottom: 0;
+      })
+    }
+  }
+
+  &__title {
+    .text-size-4();
+    font-weight: 500;
+  }
+
+  &__list {
+    .text-size-4();
+    font-weight: 300;
+    list-style-type: disc;
+    margin-top: 17px;
+    margin-left: 18px;
+
+    .tablet({
+      margin-top: 22px;
+    })
+  }
+}

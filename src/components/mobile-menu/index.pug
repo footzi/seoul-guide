@@ -1,0 +1,13 @@
+- var CONSTANTS = require("../../constants/index.json");
+
+.mobile-menu#js-mobile-menu
+    .mobile-menu__content
+        nav
+            ul.mobile-menu__list
+                li
+                    a(href=`${CONSTANTS.sections.about}`).link О путеводителе
+                li
+                    a(href=`${CONSTANTS.sections.author}`).link Об авторе
+                li
+                    a(href=`${CONSTANTS.sections.price}`).link Стоимость
+

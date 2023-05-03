@@ -1,0 +1,22 @@
+- var CONSTANTS = require("../../../constants/index.json");
+
+section.author
+    h3.author__title Об авторе
+
+    picture.author__picture
+        //source(srcset="./images/firstscreen.avif" media="(min-width: 576px)")
+        //source(srcset="./images/firstscreen.webp" media="(min-width: 576px)")
+        //source(srcset="./images/firstscreen-mobile.avif" media="(max-width: 575px)")
+        //source(srcset="./images/firstscreen-mobile.webp" media="(max-width: 575px)")
+        img.author__image(src="./images/author.png" alt="")
+
+    .author__content
+        .author__text
+            p Всем привет!
+            p <b>Меня зовут Аня, я жила в Сеуле 2 месяца в 2023 году в качестве туриста.</b>
+            p Готовясь к поездке в Корею я <b>потратила много времени</b> на поиски информации о достопримечательностях, ценах и бытовых вопросах в Сеуле.
+                | К сожалению, большая часть найденной информации в последствии оказалась <b>устаревшей</b> и не соответствовала реальности.
+            p Именно по этой причине и родилась идея сделать собственный путеводитель с самой актуальной и проверенной мной лично информацией.
+            p Надеюсь он будет вам полезным :)
+
+        .author__link Мой инстаграм - <a href="#{CONSTANTS.instagram}" class="link link_theme_underline link_theme_italic link_theme_color">an_manakova</a>

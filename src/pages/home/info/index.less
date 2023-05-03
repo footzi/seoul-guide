@@ -1,0 +1,60 @@
+@import "@/styles";
+
+.info {
+  .grid();
+  .layout();
+
+  .tablet({
+    padding-bottom: 102px;
+  });
+
+  .desktop({
+    padding-bottom: 154px;
+  });
+
+  &__picture {
+    .col(22, 2);
+    position: relative;
+
+    .tablet({
+      .col(12, 2);
+    })
+  }
+
+  &__image {
+    position: absolute;
+    top: -150px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 350px;
+    display: block;
+
+    .tablet({
+      max-width: 500px;
+      top: -80px;
+    });
+
+    .desktop({
+      top: -120px;
+    })
+  }
+
+  &__text {
+    .col(20, 3);
+    .text-size-2();
+    margin-top: 250px;
+    text-align: center;
+    font-weight: 300;
+
+    .tablet({
+      .col(10, 14);
+      margin-top: 62px;
+      text-align: left;
+    });
+
+    .desktop({
+      margin-top: 104px;
+    })
+  }
+}

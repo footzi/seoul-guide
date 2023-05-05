@@ -2,6 +2,7 @@ export class MobileMenu {
   constructor() {
     this.button = document.querySelector('#js-mobile-menu-button');
     this.menu = document.querySelector('#js-mobile-menu');
+    this.overlay = this.menu.querySelector('#js-mobile-menu__overlay');
     this.links = Array.from(this.menu.querySelectorAll('#js-mobile-menu a')) ?? [];
     this.isOpen = false;
 
@@ -14,6 +15,8 @@ export class MobileMenu {
     this.links.forEach((link) => {
       link.addEventListener('click', () => this.toggle());
     });
+
+    this.overlay.addEventListener('click', () => this.toggle());
   }
 
   toggle() {

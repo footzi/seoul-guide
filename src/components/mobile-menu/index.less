@@ -22,8 +22,8 @@
   }
 
   &__content {
-    width: 100%;
-    height: 100vh;
+    width: 310px;
+    height: 500px;
     transform: translateX(100%);
     transition: 0.3s transform;
     position: absolute;
@@ -31,13 +31,36 @@
     right: 0;
     z-index: 2;
     background: @white;
-    padding: 62px 32px;
+    padding-top: 70px;
+    padding-left: 55px;
     overflow-y: auto;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+  }
+
+  &__overlay {
+    transition: 0.3s opacity;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: @black;
+    opacity: 0;
+    z-index: 1;
+    display: block;
   }
 
   &__list {
+    .text-size-5();
+    border-left: 1px solid @pink;
+    padding: 20px;
+    font-weight: 300;
+
     li {
-      margin-bottom: 12px;
+      &:not(:last-child) {
+        margin-bottom: 35px;
+      }
     }
   }
 }

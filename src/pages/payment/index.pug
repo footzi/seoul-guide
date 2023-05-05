@@ -1,0 +1,29 @@
+extends ../../layout/index
+
+block payment-content
+    - var CONSTANTS = require("../../constants/index.json");
+
+    div.payment
+        .payment__title Товар
+        p.payment__name “Путеводитель по Сеулу 2023” в электронном виде, файл pdf.
+
+        form.payment__form
+            .payment__inputs
+                input.input(placeholder="Ваше имя*")
+                input.input(placeholder="E-mail*")
+            label.payment__agreements
+                input(type="checkbox").checkbox
+                span Я соглашаюсь с <a target="_blank" href="#{CONSTANTS.pages.privacyPolicy}" class="link link_theme_color link_theme_underline">политикой конфиденциальности</a>&nbsp;
+                    | и <a target="_blank" href="#{CONSTANTS.pages.agreements}" class="link link_theme_color link_theme_underline">обработкой персональных данных</a>
+
+            .payment__price
+                b К оплате:
+                b.payment__price-value #{CONSTANTS.price} руб.
+
+            button.button.payment__submit-button Оплатить
+
+
+        .payment__info После оплаты:
+            ul.payment__list
+                li дождитесь появления ссылки на скачивание файла;
+                li также файл будет отправлен вам на email в течении 24 часов после оплаты.

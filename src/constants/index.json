@@ -1,21 +1,19 @@
 {
-  "email": "moneyhamsterask@gmail.com",
+  "email": "anmanakova@gmail.com",
   "domain": "https://moneyhamster.ru",
   "instagram": "http://https://www.instagram.com/",
   "sections": {
-    "about": "/#about",
+    "benefits": "/#benefits",
     "author": "/#author",
     "price": "/#price"
   },
   "pages": {
     "home": "/",
+    "payment": "/payment.html",
+    "confirmation": "confirmation.html",
     "agreements": "/agreements.html",
-    "privacyPolicy": "/privacy-policy.html",
-    "app": "/app",
-    "signup": "/app/signup",
-    "login": "/app/login",
-    "settings": "/app/settings"
+    "privacyPolicy": "/privacy-policy.html"
   },
   "price": 499,
-  "year": "2023"
+  "year": 2023
 }

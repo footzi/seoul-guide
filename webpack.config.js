@@ -3,7 +3,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
-const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 
 module.exports = (env) => {
   const isProduction = env.production;
@@ -40,14 +40,22 @@ module.exports = (env) => {
         template: path.resolve(__dirname, 'src/pages/home', 'index.pug'),
         filename: './index.html',
       }),
-      // new HtmlWebpackPlugin({
-      //   template: path.resolve(__dirname, 'src/pages/agreements', 'index.pug'),
-      //   filename: './agreements.html',
-      // }),
-      // new HtmlWebpackPlugin({
-      //   template: path.resolve(__dirname, 'src/pages/privacy-policy', 'index.pug'),
-      //   filename: './privacy-policy.html',
-      // }),
+      new HtmlWebpackPlugin({
+        template: path.resolve(__dirname, 'src/pages/payment', 'index.pug'),
+        filename: './payment.html',
+      }),
+      new HtmlWebpackPlugin({
+        template: path.resolve(__dirname, 'src/pages/confirmation', 'index.pug'),
+        filename: './confirmation.html',
+      }),
+      new HtmlWebpackPlugin({
+        template: path.resolve(__dirname, 'src/pages/agreements', 'index.pug'),
+        filename: './agreements.html',
+      }),
+      new HtmlWebpackPlugin({
+        template: path.resolve(__dirname, 'src/pages/privacy-policy', 'index.pug'),
+        filename: './privacy-policy.html',
+      }),
       new CopyPlugin({
         patterns: [{ from: './public/', to: './' }],
       }),
@@ -64,10 +72,7 @@ module.exports = (env) => {
     },
     optimization: {
       minimize: true,
-      minimizer: [
-        "...",
-        new CssMinimizerPlugin(),
-      ],
+      minimizer: ['...', new CssMinimizerPlugin()],
     },
   };
 };

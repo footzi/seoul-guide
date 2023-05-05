@@ -1,0 +1,91 @@
+@import "@/styles";
+
+.payment {
+  .text-size-4();
+
+  &__title {
+    font-weight: 500;
+  }
+
+  &__name {
+    max-width: 70%;
+    margin-top: 20px;
+
+    .tablet({
+      max-width: max-content;
+    });
+  }
+
+  &__form {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+
+    .mobile-wide({
+      margin-top: 44px;
+    });
+
+    .tablet({
+      margin-top: 32px;
+    })
+  }
+
+  &__inputs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 18px;
+
+    .input {
+      width: 100%;
+
+      .desktop({
+        width: 280px;
+      })
+    };
+  }
+
+  &__agreements {
+    .text-size-5();
+    display: flex;
+    align-items: center;
+    font-weight: 300;
+    margin-top: 20px;
+
+    span {
+      margin-left: 24px;
+    }
+  }
+
+  &__price {
+    margin-top: 43px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__price-value {
+    .text-size-3();
+  }
+
+  &__submit-button {
+    width: 100%;
+    margin-top: 34px;
+    margin-left: auto;
+
+    .tablet({
+      width: 260px;
+    })
+  }
+
+  &__info {
+    margin-top: 34px;
+    font-weight: 300;
+  }
+
+  &__list {
+    list-style-type: disc;
+    padding-left: 24px;
+    margin-top: 12px;
+  }
+}

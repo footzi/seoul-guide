@@ -1,0 +1,56 @@
+@import "@/styles";
+
+.payment-layout {
+  .grid();
+  .layout();
+  margin-top: 85px;
+  margin-bottom: 66px;
+
+  .tablet({
+    margin-top: 135px;
+    margin-bottom: 128px;
+  });
+
+  .desktop({
+    margin-top: 140px;
+    margin-bottom: 100px;
+  });
+
+  &__content {
+    .col(20, 3);
+
+    .tablet({
+      .col(13, 2);
+    });
+
+    .desktop({
+      .col(12, 3);
+    })
+  }
+
+  &__picture {
+    .col(6, 17);
+    position: relative;
+
+    .tablet({
+      .col(7, 17);
+      order: 1;
+    });
+
+    .desktop({
+      .col(7, 16);
+    });
+  }
+
+  &__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: block;
+
+    .tablet({
+      position: relative;
+    });
+  }
+}

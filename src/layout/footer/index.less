@@ -1,0 +1,66 @@
+@import "@/styles";
+
+.footer {
+  padding-top: 41px;
+  padding-bottom: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+
+  .tablet {
+    padding-top: 28px;
+    padding-bottom: 16px;
+  }
+
+  .desktop({
+    padding-top: 42px;
+    padding-bottom: 36px;
+  });
+
+  &__content-container {
+    .grid();
+    .layout();
+  }
+
+  &__content {
+    .col(20, 3);
+    .text-size-5();
+    text-align: center;
+
+    .tablet({
+      .col(22, 2);
+      display: flex;
+      position: relative;
+      text-align: left;
+      justify-content: space-between;
+    });
+
+    .desktop({
+      .col(20, 3);
+    })
+  }
+
+  &__links {
+    margin-top: 32px;
+    font-weight: 300;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    .tablet({
+      margin-top: 0;
+      text-align: right;
+    })
+  }
+
+  &__year {
+    margin-top: 22px;
+
+    .tablet({
+      position: absolute;
+      margin-top: 42px;
+    });
+
+    .desktop({
+      margin-top: 22px;
+    })
+  }
+}

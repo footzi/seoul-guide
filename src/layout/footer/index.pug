@@ -1,0 +1,13 @@
+- var CONSTANTS = require("../../constants/index.json");
+
+footer.footer
+    .footer__content-container
+        .footer__content
+            .footer__info
+                p.footer__mail По всем возникшим вопросам можно написать мне на почту <a href="mailto:#{CONSTANTS.email}" class="link link_theme_underline">#{CONSTANTS.email}</a>
+
+            .footer__links
+                a.link.link_theme_underline(target="_blank" href=`${CONSTANTS.pages.privacyPolicy}`) Политика конфиденциальности
+                a.link.link_theme_underline(target="_blank" href=`${CONSTANTS.pages.agreements}`) Согласие на обработку персональных данных
+
+            .footer__year #{CONSTANTS.year}

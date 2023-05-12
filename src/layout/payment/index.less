@@ -40,6 +40,26 @@
     .desktop({
       .col(7, 16);
     });
+
+    &_theme_confirmation {
+      .col(6, 10);
+
+      .tablet({
+        .col(7, 17);
+      });
+
+      .desktop({
+        .col(7, 16);
+      });
+
+      .payment-layout__image {
+        position: relative;
+
+        .desktop({
+          position: absolute;
+        })
+      }
+    }
   }
 
   &__image {
@@ -52,5 +72,18 @@
     .tablet({
       position: relative;
     });
+  }
+
+  &__info {
+    .col(20, 3);
+    order: 2;
+
+    .tablet({
+      .col(18, 4);
+    });
+
+    .desktop({
+      .col(10, 4);
+    })
   }
 }

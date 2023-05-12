@@ -23,8 +23,13 @@
     opacity: 0.8;
   }
 
+  &:disabled {
+    pointer-events: none;
+    opacity: 0.4;
+  }
+
   &:focus-visible {
     outline-offset: 2px;
-    outline: 2px solid @flower;
+    outline: 2px solid @pink;
   }
 }

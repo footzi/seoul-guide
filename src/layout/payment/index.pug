@@ -1,5 +1,7 @@
-section.payment-layout
-    picture.payment-layout__picture
+block payment-content-constants
+
+section.payment-layout(class=paymentContentClass)
+    picture.payment-layout__picture(class={"payment-layout__picture_theme_confirmation": isConfirmation})
         //source(srcset="./images/firstscreen.avif" media="(min-width: 576px)")
         //source(srcset="./images/firstscreen.webp" media="(min-width: 576px)")
         //source(srcset="./images/firstscreen-mobile.avif" media="(max-width: 575px)")
@@ -8,3 +10,7 @@ section.payment-layout
 
     .payment-layout__content
         block payment-content
+
+    if isConfirmation
+        .payment-layout__info
+            block payment-content-info

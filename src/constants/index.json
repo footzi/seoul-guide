@@ -1,7 +1,7 @@
 {
   "email": "anmanakova@gmail.com",
-  "domain": "https://moneyhamster.ru",
-  "instagram": "http://https://www.instagram.com/",
+  "domain": "https://real-guide.ru",
+  "instagram": "https://instagram.com/",
   "sections": {
     "benefits": "/#benefits",
     "author": "/#author",
@@ -14,6 +14,7 @@
     "agreements": "/agreements.html",
     "privacyPolicy": "/privacy-policy.html"
   },
+  "guideFile": "./files/Seoul-Guide.pdf",
   "price": 499,
   "year": 2023
 }

@@ -68,6 +68,17 @@
     .text-size-3();
   }
 
+  &__error {
+    .text-size-4();
+    color: red;
+    margin-top: 12px;
+    display: none;
+
+    &.is-visible {
+      display: block;
+    }
+  }
+
   &__submit-button {
     width: 100%;
     margin-top: 34px;
@@ -75,7 +86,28 @@
 
     .tablet({
       width: 260px;
-    })
+    });
+
+    &.is-hidden {
+      display: none;
+    }
+
+    &.is-loading {
+      svg {
+        display: flex;
+      }
+
+      span {
+        display: none;
+      }
+    }
+
+    svg {
+      width: 29px;
+      height: 29px;
+      display: none;
+      margin: 0 auto;
+    }
   }
 
   &__info {

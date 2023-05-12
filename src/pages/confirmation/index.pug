@@ -1,0 +1,36 @@
+extends ../../layout/index
+
+block vars
+    - var title='Real Guide | Подтверждение оплаты'
+
+block payment-content
+    - var CONSTANTS = require("../../constants/index.json");
+
+    block payment-content-constants
+        - var isConfirmation = true
+        - var paymentContentClass = 'js-confirmation'
+
+    .confirmation
+        .confirmation__content.js-confirmation-content
+            .confirmation__title Дождитесь подтверждения оплаты....
+            i.confirmation__wait-text (это может занять несколько минут)
+
+            <svg class="confirmation__icon" width="58" height="58" viewBox="0 0 58 58" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_1_568)">
+                    <path d="M52.5625 29C52.5625 35.2492 50.08 41.2424 45.6612 45.6612C41.2424 50.08 35.2492 52.5625 29 52.5625C22.7508 52.5625 16.7576 50.08 12.3388 45.6612C7.91997 41.2424 5.4375 35.2492 5.4375 29C5.4375 22.7508 7.91997 16.7576 12.3388 12.3388C16.7576 7.91997 22.7508 5.4375 29 5.4375C35.2492 5.4375 41.2424 7.91997 45.6612 12.3388C50.08 16.7576 52.5625 22.7508 52.5625 29ZM0 29C0 36.6913 3.05535 44.0675 8.4939 49.5061C13.9325 54.9447 21.3087 58 29 58C36.6913 58 44.0675 54.9447 49.5061 49.5061C54.9447 44.0675 58 36.6913 58 29C58 21.3087 54.9447 13.9325 49.5061 8.4939C44.0675 3.05535 36.6913 0 29 0C21.3087 0 13.9325 3.05535 8.4939 8.4939C3.05535 13.9325 0 21.3087 0 29ZM26.2812 13.5938V29C26.2812 29.9062 26.7344 30.7559 27.4934 31.2656L38.3684 38.5156C39.6145 39.3539 41.3023 39.0141 42.1406 37.7566C42.9789 36.4992 42.6391 34.8227 41.3816 33.9844L31.7188 27.55V13.5938C31.7188 12.0871 30.5066 10.875 29 10.875C27.4934 10.875 26.2812 12.0871 26.2812 13.5938Z" fill="#F2EBFF"/>
+                </g>
+                <defs>
+                    <clipPath id="clip0_1_568">
+                        <rect width="58" height="58" fill="white"/>
+                    </clipPath>
+                </defs>
+            </svg>
+        .confirmation__error.js-confirmation-error Произошла ошибка. Напишите на почту <a href="mailto:#{CONSTANTS.email}" class="link link_theme_underline link_theme_inherit">#{CONSTANTS.email}</a> или попробуйте позднее
+
+block payment-content-info
+    .confirmation__info.js-confirmation-info
+        div ВНИМАНИЕ!
+        ul.confirmation__list
+            li дождитесь появления ссылки на скачивание файла;
+            li также файл будет отправлен вам на email в течении 24 часов после оплаты.
+

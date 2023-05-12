@@ -13,26 +13,27 @@
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-}
+  cursor: pointer;
 
-.checkbox::before {
-  content: "";
-  border-radius: 2px;
-  width: 14px;
-  height: 14px;
-  transform: scale(0);
-  transition: 120ms transform ease-in-out;
-  box-shadow: inset 14px 14px @pink;
-}
+  &::before {
+    content: "";
+    border-radius: 2px;
+    width: 14px;
+    height: 14px;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 14px 14px @pink;
+  }
 
-.checkbox:checked::before {
-  transform: scale(1);
-}
+  &:checked::before {
+    transform: scale(1);
+  }
 
-.checkbox:hover {
-  outline: 1.5px solid @pink;
-}
+  &:hover {
+    outline: 1.5px solid @pink;
+  }
 
-.checkbox:focus-visible {
-  outline: 2px solid @pink;
+  &:focus-visible {
+    outline: 2px solid @pink;
+  }
 }

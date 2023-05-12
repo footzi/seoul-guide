@@ -1,3 +1,5 @@
+const URL = '/pay';
+
 export class Payment {
   constructor(container) {
     this.form = container;
@@ -51,7 +53,7 @@ export class Payment {
     try {
       this.submitButton.classList.add('is-loading');
 
-      const response = await fetch('/test', {
+      const response = await fetch(URL, {
         method: 'POST',
         body: JSON.stringify(this.data),
       });

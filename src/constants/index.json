@@ -16,5 +16,8 @@
   },
   "guideFile": "./files/Seoul-Guide.pdf",
   "price": 499,
-  "year": 2023
+  "year": 2023,
+  "inn": 525634708455,
+  "phone": "+79531733297",
+  "fio": "Манакова Анна Алексеевна"
 }

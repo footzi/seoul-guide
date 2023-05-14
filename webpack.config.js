@@ -4,6 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
+const Dotenv = require('dotenv-webpack');
 
 module.exports = (env) => {
   const isProduction = env.production;
@@ -62,6 +63,7 @@ module.exports = (env) => {
       new MiniCssExtractPlugin({
         filename: `index.css?v${Date.now()}`,
       }),
+      new Dotenv(),
     ],
     devServer: {
       static: {

@@ -28,12 +28,15 @@ export class Confirmation {
       const data = await response.json();
 
       if (data.status === 'OK') {
-        this.contentBlock.innerHTML = confirmationSuccessTemplate();
+        const link = process.env.GUIDE_LINK;
+
+        this.contentBlock.innerHTML = confirmationSuccessTemplate({ link });
         this.infoBlock.classList.add('is-hidden');
       } else {
         throw new Error();
       }
     } catch (error) {
+      console.log(error);
       this.contentBlock.classList.add('is-hidden');
       this.infoBlock.classList.add('is-hidden');
       this.errorBlock.classList.add('is-visible');

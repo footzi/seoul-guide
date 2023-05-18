@@ -14,9 +14,9 @@
     "agreements": "/agreements.html",
     "privacyPolicy": "/privacy-policy.html"
   },
+  "returnUrl": "https://real-guide.ru/confirmation.html",
   "price": 499,
   "year": 2023,
   "inn": 525634708455,
-  "phone": "+79531733297",
   "fio": "Манакова Анна Алексеевна"
 }

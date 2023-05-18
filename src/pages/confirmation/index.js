@@ -1,5 +1,7 @@
 import confirmationSuccessTemplate from './success/index.pug';
 
+const host = process.env.BACKEND_HOST;
+
 export class Confirmation {
   constructor(container) {
     this.contentBlock = container.querySelector('.js-confirmation-content');
@@ -16,10 +18,7 @@ export class Confirmation {
     }
 
     try {
-      const response = await fetch('/checkStatus', {
-        method: 'GET',
-        params: { id: this.id },
-      });
+      const response = await fetch(`${host}/checkStatus?id=${this.id}`);
 
       if (!response.ok) {
         throw new Error();
@@ -27,19 +26,38 @@ export class Confirmation {
 
       const data = await response.json();
 
-      if (data.status === 'OK') {
+      if (data.success) {
         const link = process.env.GUIDE_LINK;
 
         this.contentBlock.innerHTML = confirmationSuccessTemplate({ link });
         this.infoBlock.classList.add('is-hidden');
+
+        this.statisticDownload();
       } else {
         throw new Error();
       }
     } catch (error) {
-      console.log(error);
       this.contentBlock.classList.add('is-hidden');
       this.infoBlock.classList.add('is-hidden');
       this.errorBlock.classList.add('is-visible');
     }
+  }
+
+  statisticDownload() {
+    const link = document.querySelector('.js-confirmation-file-link');
+
+    if (!link) {
+      return;
+    }
+
+    link.addEventListener('click', async () => {
+      await fetch(`${host}/statistic-downloads`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ id: this.id }),
+      });
+    });
   }
 }

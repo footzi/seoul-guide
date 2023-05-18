@@ -1,4 +1,6 @@
-const URL = '/pay';
+const host = process.env.BACKEND_HOST;
+
+import CONSTANTS from '../../constants/index.json';
 
 export class Payment {
   constructor(container) {
@@ -53,9 +55,18 @@ export class Payment {
     try {
       this.submitButton.classList.add('is-loading');
 
-      const response = await fetch(URL, {
+      const body = {
+        ...this.data,
+        value: CONSTANTS.price,
+        returnUrl: CONSTANTS.returnUrl,
+      };
+
+      const response = await fetch(`${host}/pay`, {
         method: 'POST',
-        body: JSON.stringify(this.data),
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(body),
       });
 
       if (!response.ok) {

@@ -5,12 +5,12 @@ section.firstscreen(aria-labelledby="firstscreen-title")
 
     div.firstscreen__image-wrapper
         picture
-            //source(srcset="./images/firstscreen.avif" media="(min-width: 576px)")
-            //source(srcset="./images/firstscreen.webp" media="(min-width: 576px)")
-            //source(srcset="./images/firstscreen-mobile.avif" media="(max-width: 575px)")
-            //source(srcset="./images/firstscreen-mobile.webp" media="(max-width: 575px)")
+            source(srcset="./images/firstscreen.avif" media="(min-width: 576px)")
+            source(srcset="./images/firstscreen.webp" media="(min-width: 576px)")
+            source(srcset="./images/firstscreen-mobile.avif" media="(max-width: 575px)")
+            source(srcset="./images/firstscreen-mobile.webp" media="(max-width: 575px)")
             img.firstscreen__image(src="./images/firstscreen.png" alt="")
 
-    p.firstscreen__description Самый актуальный путеводитель по достопримечательностям Сеула
+    h2.firstscreen__description Самый актуальный путеводитель по достопримечательностям Сеула
 
     a(href=`${CONSTANTS.pages.payment}`).button.firstscreen__button Купить за #{CONSTANTS.price} руб

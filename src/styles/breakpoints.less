@@ -17,6 +17,12 @@
 // Extra extra large screen / large desktop
 @screen-xxl: 1600px;
 
+.mobile-and-wide-only(@a) {
+  @media (max-width: @screen-md) {
+    @a()
+  }
+}
+
 .mobile-wide(@a) {
   @media (min-width: @screen-sm) {
     @a()

@@ -1,19 +1,11 @@
 @import "@/styles";
 
 .price {
-  margin-top: 70px;
+  margin-top: 60px;
 
-  &__image {
-    width: 100%;
-    height: 367px;
-    object-fit: cover;
-    display: block;
-    box-shadow: 0 0 25px rgba(0, 0, 0, 0.25);
-
-    .desktop({
-      height: 477px;
-    })
-  }
+  .desktop({
+    margin-top: 126px;
+  });
 
   &__content-container {
     background-color: @sky;
@@ -29,40 +21,56 @@
 
   &__text {
     .col(20, 3);
-    .text-size-4();
+    .text-size-3();
 
     .tablet({
       .col(13, 2);
     });
 
     .desktop({
-      .col(12, 3);
-    })
+      .col(11, 3);
+    });
+
+    p {
+      text-align: center;
+
+      .tablet({
+        text-align: left;
+      })
+    }
   }
 
   &__text-price {
     .text-size-3();
-    font-weight: 500;
+    font-weight: 700;
     display: flex;
-    align-items: center;
+    align-items: flex-end;
+    justify-content: space-between;
     margin-bottom: 32px;
 
-    span {
+    .desktop({
+      align-items: center;
+    });
+
+    span:nth-child(1) {
       text-transform: uppercase;
-      max-width: 150px;
+    }
+
+    span:nth-child(2) {
+      display: none;
 
       .desktop({
-        max-width: max-content;
+        display: inline;
       })
     }
 
     b {
-      margin-left: auto;
+      font-weight: 700;
       font-size: 25px;
       line-height: 29px;
+      white-space: nowrap;
 
       .tablet({
-        margin-left: 24px;
         font-size: 35px;
         line-height: 41px;
       });

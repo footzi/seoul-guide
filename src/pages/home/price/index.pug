@@ -1,15 +1,9 @@
 - var CONSTANTS = require("../../../constants/index.json");
 
 section.price#price
-    picture
-        source(srcset="./images/price.avif?v1" media="(min-width: 576px)")
-        source(srcset="./images/price.webp?v1" media="(min-width: 576px)")
-        source(srcset="./images/price.avif?v1" media="(max-width: 575px)")
-        source(srcset="./images/price.webp?v1" media="(max-width: 575px)")
-        img.price__image(src="./images/price.jpg?v1" alt="" loading="lazy")
     .price__content-container
         .price__content
             div.price__text
-                h2.price__text-price <span>Стоимость путеводителя</span> <b>499 руб.</b>
-                p Благодаря ему вы точно сэкономите время на подготовке к поездке в Корею!
+                h2.price__text-price <span>Стоимость путеводителя</span> <span>-</span> <b>#{CONSTANTS.price} руб.</b>
+                p В него входит 36 страниц только самой свежей информации&nbsp;2023&nbsp;года!
             a(href=`${CONSTANTS.pages.payment}`).button.price__button Купить

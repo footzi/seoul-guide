@@ -1,16 +1,16 @@
-@import "@/styles";
+@import '@/styles';
 
 .author {
   .layout();
   .grid();
-  margin-top: 62px;
+  padding-top: 62px;
 
   .tablet({
-    margin-top: 96px;
+    padding-top: 96px;
   });
 
   .desktop({
-    margin-top: 123px;
+    padding-top: 123px;
   });
 
   &__title {
@@ -51,7 +51,7 @@
 
     .desktop({
       .col(12, 3);
-    })
+    });
   }
 
   &__text {
@@ -68,7 +68,7 @@
 
       .tablet({
         margin-bottom: 24px;
-      })
+      });
     }
   }
 

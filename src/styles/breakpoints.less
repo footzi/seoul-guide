@@ -4,6 +4,7 @@
 
 // 👇 Small screen / tablet
 @screen-sm: 576px;
+@screen-sm-max: 767px;
 
 // Medium screen / desktop
 @screen-md: 768px;
@@ -18,7 +19,7 @@
 @screen-xxl: 1600px;
 
 .mobile-and-wide-only(@a) {
-  @media (max-width: @screen-md) {
+  @media (max-width: @screen-sm-max) {
     @a()
   }
 }

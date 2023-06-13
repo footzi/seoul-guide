@@ -9,3 +9,4 @@ npm-debug.log*
 /dist
 .env
 public/files/Seoul-Guide.pdf
+public/files/Seoul-Guide-Preview.pdf

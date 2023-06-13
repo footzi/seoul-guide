@@ -1,14 +1,14 @@
-@import "@/styles";
+@import '@/styles';
 
 .firstscreen {
   .layout();
   .grid();
   margin-top: 85px;
-  margin-bottom: 53px;
+  margin-bottom: 82px;
 
   .tablet({
     margin-top: 117px;
-    margin-bottom: 126px;
+    margin-bottom: 75px;
   });
 
   .desktop({
@@ -77,18 +77,61 @@
     });
   }
 
-  &__button {
+  &__buttons-container {
+    .grid();
     .col(18, 4);
-    margin-top: 49px;
+    align-items: flex-start;
+    margin-top: 50px;
 
     .tablet({
-      .col(10, 2);
-      margin-top: 90px;
+      .col(12, 2);
+      margin-top: 50px;
     });
 
     .desktop({
-      .col(6, 3);
-      margin-top: 69px;
+      .col(12, 3);
+      margin-top: 79px;
     });
+
+    i {
+      .text-size-5();
+      display: block;
+      margin-top: 10px;
+
+      .desktop({
+        margin-top: 19px;
+      });
+    }
+
+    a {
+      width: 100%;
+    }
+  }
+
+  &__button {
+    .col(24, 1);
+
+    .tablet({
+      .col(14, 1);
+    });
+
+    &:nth-child(odd) {
+      .desktop({
+        .col(12, 1);
+      });
+    }
+
+    &:nth-child(even) {
+      margin-top: 40px;
+
+      .tablet({
+        margin-top: 33px;
+      });
+
+      .desktop({
+        .col(12, 13);
+        margin-top: 0;
+      });
+    }
   }
 }

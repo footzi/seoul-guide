@@ -1,100 +1,206 @@
 @import '@/styles';
 
 .price {
-  padding-top: 60px;
+  padding-top: 78px;
 
-  .desktop({
-    padding-top: 126px;
+  .tablet({
+    padding-top: 113px;
   });
 
-  &__content-container {
-    background-color: @sky;
+  .desktop({
+      padding-top: 135px;
+    });
+
+  &__title {
+    .text-size-3();
+    font-weight: 500;
+    text-align: center;
   }
 
-  &__content {
+  &__container {
     .grid();
     .layout();
-    align-items: flex-start;
-    padding-top: 54px;
-    padding-bottom: 65px;
+  }
+
+  &__guide {
+    .grid();
+    .col(22, 2);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+    border-radius: 11px;
+    margin-top: 32px;
+    padding-top: 26px;
+    padding-bottom: 37px;
 
     .tablet({
-      padding-top: 74px;
-      padding-bottom: 48px;
+      padding-top: 40px;
+      padding-bottom: 28px;
     });
 
     .desktop({
-      padding-top: 128px;
-      padding-bottom: 151px;
+      .col(20, 3);
+      margin-top: 67px;
+      padding-top: 37px;
+      padding-bottom: 45px;
     });
   }
 
-  &__text {
-    .col(20, 3);
-    .text-size-3();
+  &__guide-picture {
+    .col(12, 7);
+    position: relative;
+    margin-top: 44px;
 
     .tablet({
-      .col(13, 2);
+      .col(6, 2);
+      margin-top: -28px;
     });
 
     .desktop({
-      .col(11, 3);
+      .col(4, 2);
     });
-
-    p {
-      text-align: center;
-
-      .tablet({
-        text-align: left;
-      });
-    }
   }
 
-  &__text-price {
+  &__guide-image {
+    width: 100%;
+    object-fit: cover;
+    display: block;
+
+    .tablet({
+      top: 0;
+      left: 0;
+      position: absolute;
+    });
+  }
+
+  &__guide-title {
     .text-size-3();
+    .col(24);
     font-weight: 700;
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
-    margin-bottom: 32px;
+    text-align: center;
 
-    .desktop({
-      align-items: center;
+    .tablet({
+      .col(16, 8);
+      text-align: left;
     });
 
-    span:nth-child(1) {
-      text-transform: uppercase;
-    }
+    .desktop({
+      .col(17, 7);
+    });
+  }
 
-    span:nth-child(2) {
-      display: none;
+  &__guide-description {
+    .text-size-4();
+    .col(22, 2);
+    margin-top: 81px;
+    text-align: justify;
 
-      .desktop({
-        display: inline;
-      });
+    .tablet({
+      .col(16, 8);
+      text-align: left;
+      margin-top: 47px;
+    });
+
+    .desktop({
+      .col(17, 7);
+      margin-top: 23px;
+    });
+  }
+
+  &__guide-price {
+    .col(22, 2);
+    .grid();
+    align-items: center;
+    margin-top: 27px;
+
+    .tablet({
+      margin-top: 71px;
+      justify-content: space-between;
+    });
+
+    .desktop({
+      .col(17, 7);
+      margin-top: 30px;
+    });
+  }
+
+  &__guide-value {
+    .col(24);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .tablet({
+      .col(11);
+    });
+
+    .desktop({
+      .col(12, 1);
+    });
+
+    span {
+      .text-size-3();
     }
 
     b {
+      .text-size-2();
       font-weight: 700;
-      font-size: 25px;
-      line-height: 29px;
-      white-space: nowrap;
-
-      .tablet({
-        font-size: 35px;
-        line-height: 41px;
-      });
-
-      .desktop({
-        font-size: 40px;
-        line-height: 47px;
-      });
     }
   }
 
-  &__button {
-    .col(20, 3);
-    margin-top: 66px;
+  &__guide-button {
+    .col(24);
+    margin-top: 36px;
+
+    .tablet({
+      .col(10, 15);
+      margin-top: 0;
+    });
+
+    .desktop({
+      .col(11, 15);
+      max-width: 295px;
+    });
+  }
+
+  &__info {
+    .grid();
+    .col(22, 2);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+    border-radius: 11px;
+    margin-top: 35px;
+    padding-top: 57px;
+    padding-bottom: 42px;
+    align-items: center;
+
+    .tablet({
+      margin-top: 41px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+    });
+
+    .desktop({
+      .col(20, 3);
+      margin-top: 42px;
+      padding-top: 58px;
+      padding-bottom: 58px;
+    });
+  }
+
+  &__info-text {
+    .col(22, 2);
+    font-weight: 300;
+
+    .tablet({
+      .col(12, 2);
+    });
+
+    .desktop({
+      .col(13, 2);
+    });
+  }
+
+  &__info-button {
+    .col(22, 2);
+    margin-top: 32px;
 
     .tablet({
       .col(9, 15);
@@ -102,7 +208,8 @@
     });
 
     .desktop({
-      .col(6, 17);
+      .col(9, 17);
+      max-width: 295px;
     });
   }
 }

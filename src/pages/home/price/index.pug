@@ -1,9 +1,29 @@
 - var CONSTANTS = require("../../../constants/index.json");
 
 section.price#price
-    .price__content-container
-        .price__content
-            div.price__text
-                h2.price__text-price <span>Стоимость путеводителя</span> <span>-</span> <b>#{CONSTANTS.price} руб.</b>
-                p В него входит 36 страниц только самой свежей информации&nbsp;2023&nbsp;года!
-            a(href=`${CONSTANTS.pages.payment}`).button.price__button Купить
+    .h3.price__title Стоимость
+    .price__container
+        .price__guide
+            h4.price__guide-title "Путеводитель по Сеулу 2023"
+
+            picture.price__guide-picture
+                source(srcset="./images/firstscreen.avif?v1" media="(min-width: 576px)")
+                source(srcset="./images/firstscreen.webp?v1" media="(min-width: 576px)")
+                source(srcset="./images/firstscreen-mobile.avif?v1" media="(max-width: 575px)")
+                source(srcset="./images/firstscreen-mobile.webp?v1" media="(max-width: 575px)")
+                img.price__guide-image(src="./images/firstscreen.png?v1" alt="")
+
+            p.price__guide-description  Только самая свежая информация 2023 года: <br>
+                | 24 достопримечательности с описанием, ценами и рассказом как добраться.
+                | Плюс 13 страниц с ценной доп. информацией о местном транспорте, интернете, деньгах и тп.
+                | Инструкция по заполнению и подаче K-ETA. Всего в путеводителе 40 страниц.
+
+            .price__guide-price
+                .price__guide-value
+                    span Цена
+                    b #{CONSTANTS.price} руб
+                a(href=`${CONSTANTS.pages.payment}`).button.price__guide-button Купить
+
+        .price__info
+            i.price__info-text Вы также можете <b>БЕСПЛАТНО</b> скачать ознакомительную версию путеводителя ->
+            a(href=`${CONSTANTS.previewLink}` download).button.button_theme_outline.price__info-button.js-preview-download Скачать

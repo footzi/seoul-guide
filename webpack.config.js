@@ -71,6 +71,12 @@ module.exports = (env) => {
       },
       port: '3001',
       hot: true,
+      watchFiles: {
+        paths: ['src/**/*.pug'],
+        options: {
+          usePolling: true,
+        },
+      },
     },
     optimization: {
       minimize: true,

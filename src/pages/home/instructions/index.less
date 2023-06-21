@@ -1,12 +1,14 @@
 @import '@/styles';
 
 .instructions {
+  padding-top: 117px;
+
   .tablet({
-    padding-top: 70px;
+    padding-top: 102px;
   });
 
   .desktop({
-    padding-top: 77px;
+    padding-top: 169px;
   });
 
   &__content {
@@ -19,7 +21,6 @@
     .col(20, 3);
     .text-size-4();
     position: relative;
-    padding-top: 61px;
 
     .tablet({
       .col(22, 2);
@@ -32,7 +33,7 @@
     });
 
     &::after {
-      content: "";
+      content: '';
       display: none;
       width: 16px;
       height: 100%;
@@ -43,7 +44,7 @@
 
       .tablet({
         display: block;
-      })
+      });
     }
 
     i {
@@ -74,7 +75,7 @@
       li:not(:last-child) {
         .mobile-and-wide-only({
           margin-bottom: 18px;
-        })
+        });
       }
     }
   }
@@ -108,6 +109,6 @@
     .desktop({
       margin-top: 78px;
       height: 598px;
-    })
+    });
   }
 }

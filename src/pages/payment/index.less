@@ -1,4 +1,4 @@
-@import "@/styles";
+@import '@/styles';
 
 .payment {
   .text-size-4();
@@ -30,7 +30,7 @@
 
     .tablet({
       margin-top: 32px;
-    })
+    });
   }
 
   &__inputs {
@@ -44,8 +44,8 @@
 
       .desktop({
         width: 280px;
-      })
-    };
+      });
+    }
   }
 
   &__agreements {
@@ -69,6 +69,29 @@
 
   &__price-value {
     .text-size-3();
+  }
+
+  &__price-values {
+    display: flex;
+    align-items: center;
+  }
+
+  &__price-old-value {
+    margin-right: 12px;
+    position: relative;
+
+    &:before {
+      content: '';
+      width: 76px;
+      height: 2px;
+      display: block;
+      position: absolute;
+      bottom: -4px;
+      left: 50%;
+      background-color: @red;
+      transform: rotate(-16deg) translateX(-50%);
+      transform-origin: -50%;
+    }
   }
 
   &__error {

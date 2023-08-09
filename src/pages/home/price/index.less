@@ -15,6 +15,7 @@
     .text-size-3();
     font-weight: 500;
     text-align: center;
+    text-transform: uppercase;
   }
 
   &__container {
@@ -150,43 +151,6 @@
     position: relative;
   }
 
-  &__guide-old-price {
-    .text-size-4();
-    width: 100%;
-    position: absolute;
-    top: 27px;
-    left: 0;
-    text-align: center;
-    font-weight: 500;
-    color: @light-grey;
-
-    .tablet({
-      top: 32px
-    });
-
-    .desktop({
-      top: 50px
-    });
-
-    &:before {
-      content: '';
-      width: 76px;
-      height: 2px;
-      display: block;
-      position: absolute;
-      bottom: -4px;
-      left: 50%;
-      background-color: @red;
-      transform: rotate(-16deg) translateX(-50%);
-      transform-origin: -50%;
-
-      .desktop({
-        width: 100px;
-        bottom: -8px;
-      });
-    }
-  }
-
   &__guide-left {
     .col(24);
     margin-top: 46px;
@@ -210,66 +174,4 @@
       max-width: 295px;
     });
   }
-
-  &__guide-action-text {
-    .text-size-5();
-    color: @light-grey;
-    margin-top: 12px;
-    display: block;
-    font-weight: 300;
-    position: absolute;
-    bottom: -26px;
-  }
-
-  //&__info {
-  //  .grid();
-  //  .col(22, 2);
-  //  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
-  //  border-radius: 11px;
-  //  margin-top: 35px;
-  //  padding-top: 57px;
-  //  padding-bottom: 42px;
-  //  align-items: center;
-  //
-  //  .tablet({
-  //    margin-top: 41px;
-  //    padding-top: 50px;
-  //    padding-bottom: 50px;
-  //  });
-  //
-  //  .desktop({
-  //    .col(20, 3);
-  //    margin-top: 42px;
-  //    padding-top: 58px;
-  //    padding-bottom: 58px;
-  //  });
-  //}
-  //
-  //&__info-text {
-  //  .col(22, 2);
-  //  font-weight: 300;
-  //
-  //  .tablet({
-  //    .col(12, 2);
-  //  });
-  //
-  //  .desktop({
-  //    .col(13, 2);
-  //  });
-  //}
-  //
-  //&__info-button {
-  //  .col(22, 2);
-  //  margin-top: 32px;
-  //
-  //  .tablet({
-  //    .col(9, 15);
-  //    margin-top: 0;
-  //  });
-  //
-  //  .desktop({
-  //    .col(9, 17);
-  //    max-width: 295px;
-  //  });
-  //}
 }

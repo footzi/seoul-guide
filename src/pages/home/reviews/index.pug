@@ -1,0 +1,21 @@
+- var CONSTANTS = require("../../../constants/index.json");
+
+section.reviews
+    h3.reviews__title ОТЗЫВЫ
+    .swiper.js-reviews.review__slider
+        .swiper-wrapper
+            .swiper-slide.reviews__item
+                h3.reviews__item-title Сергей
+                blockquote.reviews__item-text В принципе нормально. Список достопримечательностей большой, как добраться и цены есть. Всякие бытовые вещи о транспорте, еде, деньгах тоже есть. Можно еще добавить информацию о камерах хранения и аренде машины.
+            .swiper-slide.reviews__item
+                h3.reviews__item-title Ирина
+                blockquote.reviews__item-text Хороший путеводитель. Много полезной информации, очень пригодилось. Своих денег стоит.
+            .swiper-slide.reviews__item
+                h3.reviews__item-title Юлия
+                blockquote.reviews__item-text Классный гайд!! Не пришлось долго разбираться что посмотреть, здесь все хорошо расписано. Очень здорово, что и про национальную еду есть описание, что пробовать! Спасибо!!!
+
+        .swiper-button-next.js-reviews__button-next.reviews__slider-arrow-next
+        .swiper-button-prev.js-reviews__button-prev.reviews__slider-arrow-prev
+
+    p.reviews__message Оставить отзыв можно <a href="mailto:#{CONSTANTS.email}" class="link link_theme_underline link_theme_inherit link_theme_color">здесь</a>
+

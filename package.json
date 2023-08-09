@@ -38,6 +38,7 @@
     "webpack-dev-server": "4.13.3"
   },
   "dependencies": {
-    "dotenv-webpack": "^8.0.1"
+    "dotenv-webpack": "^8.0.1",
+    "swiper": "^10.0.4"
   }
 }

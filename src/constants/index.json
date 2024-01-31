@@ -16,9 +16,10 @@
     "privacyPolicy": "/privacy-policy.html"
   },
   "returnUrl": "https://real-guide.ru/confirmation.html",
-  "price": 499,
-  "year": 2023,
+  "price": 899,
+  "year": 2024,
   "inn": 525634708455,
+  "ogrnip": 323784700302952,
   "fio": "Манакова Анна Алексеевна",
   "previewLink": "./files/Seoul-Guide-Preview.pdf"
 }

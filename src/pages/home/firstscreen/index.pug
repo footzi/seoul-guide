@@ -1,7 +1,7 @@
 - var CONSTANTS = require("../../../constants/index.json");
 
 section.firstscreen(aria-labelledby="firstscreen-title")
-    h1.firstscreen__title#firstscreen-title Ищите что посмотреть&nbsp;в&nbsp;Сеуле?
+    h1.firstscreen__title#firstscreen-title Что посмотреть в Сеуле?
 
     div.firstscreen__image-wrapper
         picture
@@ -11,10 +11,8 @@ section.firstscreen(aria-labelledby="firstscreen-title")
             source(srcset="./images/firstscreen-mobile.webp?v1" media="(max-width: 575px)")
             img.firstscreen__image(src="./images/firstscreen.png?v1" alt="")
 
-    h2.firstscreen__description Я составила самый свежий путеводитель по Сеулу&nbsp;2023 года
+    p.firstscreen__description Перед вами самый свежий путеводитель по Сеулу 2025 года.
+    p.firstscreen__description Достопримечательности. Цены. Как добраться. И многое другое!
 
     .firstscreen__buttons-container
-        div.firstscreen__button
-            //a(href=`${CONSTANTS.previewLink}` download).button.button_theme_outline.js-preview-download Скачать*
-            //i *БЕСПЛАТНАЯ ознакомительная версия
         a(href=`${CONSTANTS.pages.payment}`).button.firstscreen__button Купить

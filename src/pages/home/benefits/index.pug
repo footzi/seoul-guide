@@ -1,52 +1,73 @@
 section.benefits#benefits
-    h2.benefits__title O путеводителе
-    .benefits__line-list-container
-        .benefits__line-list-content
-            .benefits__line-list
-                span Дворцы
-                img(src="./icons/star.svg" alt="" loading="lazy")
-                span Музеи
-                img(src="./icons/star.svg" alt="" loading="lazy")
-                span Древняя крепость
-                img(src="./icons/star.svg" alt="" loading="lazy")
-                span Парк развлечений
+    .benefits__header
+        h2.benefits__title
+            span.benefits__title-number 30
+            | достопримечательностей Сеула и его окрестностей
+    .benefits__pages
+        .benefits__pages-content
+            h3.benefits__pages-title
+                span.benefits__pages-number 57
+                | страниц с самой полезной информацией
 
-    .benefits__line-list-container
-        .benefits__line-list-content
-            .benefits__line-list
-                span Парки и заповедники
-                img(src="./icons/star.svg" alt="" loading="lazy")
-                span Аквариум
-                img(src="./icons/star.svg" alt="" loading="lazy")
-                span Национальная деревня
+    .benefits__preview
+        picture.benefits__preview-picture
+            source(srcset="./images/info.avif?v1" media="(min-width: 576px)")
+            source(srcset="./images/info.webp?v1" media="(min-width: 576px)")
+            source(srcset="./images/info-mobile.avif?v1" media="(max-width: 575px)")
+            source(srcset="./images/info-mobile.webp?v1" media="(max-width: 575px)")
+            img.benefits__preview-image(src="./images/info.png?v1" alt="" loading="lazy")
 
-    .benefits__line-list-container
-        .benefits__line-list-content
-            .benefits__line-list
-                span Ботанический сад
-                img(src="./icons/star.svg" alt="" loading="lazy")
-                span Интересные улицы и районы
-                img(src="./icons/star.svg" alt="" loading="lazy")
-                span Библиотека
+        .benefits__preview-direction вот так путеводитель выглядит внутри:)
 
-    .benefits__content
-        .benefits__block
-            h3.benefits__block-title 24 достопримечательности Сеула:
-            ul.benefits__list
-                li краткое описание с пометками автора
-                li актуальные цены 2023 года
-                li подробно как до них добраться
-                li режим работы
 
-        .benefits__block
-            h3.benefits__block-title 13 страниц с полезной доп. информацией:
-            ul.benefits__list
-                li как добраться из аэропорта до центра
-                li все о транспорте Сеула, оплата проезда
-                li деньги - обмен, снятие наличных
-                li сим-карта и интернет
-                li еда - что обязательно стоит попробовать
-                li где купить качественную корейскую косметику в Сеуле
 
-            ul.benefits__list
-                li как оформить K-ETA, подробная инструкция
+    //.benefits__line-list-container
+    //    .benefits__line-list-content
+    //        .benefits__line-list
+    //            span Дворцы
+    //            img(src="./icons/star.svg" alt="" loading="lazy")
+    //            span Музеи
+    //            img(src="./icons/star.svg" alt="" loading="lazy")
+    //            span Древняя крепость
+    //            img(src="./icons/star.svg" alt="" loading="lazy")
+    //            span Парк развлечений
+    //
+    //.benefits__line-list-container
+    //    .benefits__line-list-content
+    //        .benefits__line-list
+    //            span Парки и заповедники
+    //            img(src="./icons/star.svg" alt="" loading="lazy")
+    //            span Аквариум
+    //            img(src="./icons/star.svg" alt="" loading="lazy")
+    //            span Национальная деревня
+    //
+    //.benefits__line-list-container
+    //    .benefits__line-list-content
+    //        .benefits__line-list
+    //            span Ботанический сад
+    //            img(src="./icons/star.svg" alt="" loading="lazy")
+    //            span Интересные улицы и районы
+    //            img(src="./icons/star.svg" alt="" loading="lazy")
+    //            span Библиотека
+    //
+    //.benefits__content
+    //    .benefits__block
+    //        h3.benefits__block-title 24 достопримечательности Сеула:
+    //        ul.benefits__list
+    //            li краткое описание с пометками автора
+    //            li актуальные цены 2023 года
+    //            li подробно как до них добраться
+    //            li режим работы
+    //
+    //    .benefits__block
+    //        h3.benefits__block-title 13 страниц с полезной доп. информацией:
+    //        ul.benefits__list
+    //            li как добраться из аэропорта до центра
+    //            li все о транспорте Сеула, оплата проезда
+    //            li деньги - обмен, снятие наличных
+    //            li сим-карта и интернет
+    //            li еда - что обязательно стоит попробовать
+    //            li где купить качественную корейскую косметику в Сеуле
+    //
+    //        ul.benefits__list
+    //            li как оформить K-ETA, подробная инструкция

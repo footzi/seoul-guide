@@ -10,14 +10,29 @@ section.benefits#benefits
                 | страниц с самой полезной информацией
 
     .benefits__preview
-        picture.benefits__preview-picture
-            source(srcset="./images/info.avif?v1" media="(min-width: 576px)")
-            source(srcset="./images/info.webp?v1" media="(min-width: 576px)")
-            source(srcset="./images/info-mobile.avif?v1" media="(max-width: 575px)")
-            source(srcset="./images/info-mobile.webp?v1" media="(max-width: 575px)")
-            img.benefits__preview-image(src="./images/info.png?v1" alt="" loading="lazy")
+        .benefits__preview-image-wrapper
+            picture
+                //source(srcset="./images/info.avif?v1" media="(min-width: 576px)")
+                //source(srcset="./images/info.webp?v1" media="(min-width: 576px)")
+                //source(srcset="./images/info-mobile.avif?v1" media="(max-width: 575px)")
+                //source(srcset="./images/info-mobile.webp?v1" media="(max-width: 575px)")
+                //img.benefits__preview-image(src="./images/info.png?v1" alt="" loading="lazy")
+                img.benefits__preview-image(src="./images/temp-new-guide.png?v1" alt="" loading="lazy")
 
         .benefits__preview-direction вот так путеводитель выглядит внутри:)
+
+    .benefits__special
+        ul.benefits__special-list
+           li Дворцы
+           li Фольклорная деревня
+           li Храмы
+           li Национальные заповедники
+           li Парки
+           li Ботанический сад
+           li Музеи
+           li Крепость
+           li Самобытные улочки
+           li Современная архитектура
 
 
 

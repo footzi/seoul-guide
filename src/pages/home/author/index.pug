@@ -2,20 +2,33 @@
 
 section.author#author
     h3.author__title Об авторе
+    .author__text
+        .author__text-content
+            p Привет! Меня зовут Аня.
+            br
 
-    picture.author__picture
-        source(srcset="./images/author.webp?v1" media="(min-width: 576px)")
-        source(srcset="./images/author-mobile.webp?v1" media="(max-width: 575px)")
-        img.author__image(src="./images/author.png?v1" alt="" loading="lazy")
+            p
+             b Я много путешествую, побывала уже в 20 различных странах, и самое большое впечатление на меня произвела именно Южная Корея.
+            br
 
-    .author__content
-        .author__text
-            p Привет! Меня зовут Аня:)
-            p <b>Я побывала уже в 18 различных странах, и самое большое впечатление на меня произвела именно Южная Корея.</b>
-                |&nbsp;Эта страна теперь находится на вершине моего топа самых любимых и невероятных стран, куда я хочу возвращаться вновь и вновь..
-            p Готовясь к поездке в Корею я потратила много времени на поиски информации о достопримечательностях, ценах и бытовых вопросах в Сеуле.
-                |&nbsp;К сожалению, большая часть найденной информации в последствии оказалась устаревшей и не соответствовала реальности.
-            p Именно по этой причине и родилась идея сделать собственный путеводитель с самой актуальной и проверенной мной лично информацией.
+            p Эта страна, куда я возвращаюсь вновь и вновь!
+            br
+
+            p Впервые готовясь к поездке в Корею я потратила много времени на поиски информации о достопримечательностях, ценах и бытовых вопросах в Сеуле. К сожалению, большая часть найденной информации в последствии оказалась устаревшей и не соответствовала реальности.
+            br
+
+            p Именно по этой причине и родилась идея сделать собственный путеводитель с самой актуальной и&nbsp;
+                span.author__text-color проверенной мной лично информацией.&nbsp;
+                | В нем есть все что нужно для комфортной подготовки к поездке в эту удивительную страну.
+            br
             p Надеюсь он будет вам полезным!
 
-        .author__link Моя страница VK - <a href="#{CONSTANTS.vk}" target="_blank" class="link link_theme_underline link_theme_italic link_theme_inherit link_theme_color">an_manako</a>
+
+    picture.author__picture
+        //source(srcset="./images/author.webp?v1" media="(min-width: 576px)")
+        //source(srcset="./images/author-mobile.webp?v1" media="(max-width: 575px)")
+        img.author__image(src="./images/temp-author.jpg?v1" alt="" loading="lazy")
+
+    p.author__text-ps
+        i P.S. Также я являюсь владелицей к-поп магазина, который уже второй год радует кей-поп фанатов альбомами и мерчом, который мы привозим прямо из Кореи. Если вам актуально, заглядывайте к нам:&nbsp;
+        a.author__text-ps-link(href=`${CONSTANTS.ddshop}` target="_blank" class="link link_theme_underline link_theme_italic link_theme_inherit") #{CONSTANTS.ddshop}

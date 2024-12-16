@@ -1,0 +1,56 @@
+@import '@/styles';
+
+.city {
+  .layout();
+  .grid();
+  display: none;
+
+  .tablet({
+    margin-top: 81px;
+    display: grid;
+  });
+
+  .desktop({
+    margin-top: 90px;
+  });
+
+  &__picture {
+    .col(22, 2);
+    position: relative;
+
+    .desktop({
+      .col(20, 3);
+    });
+
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      border-style: dashed;
+      border-width: 3px;
+      border-radius: 12px;
+      border-color: @violet;
+      transform: rotate(3deg);
+
+      .tablet({
+        top: -2px;
+        left: -8px;
+        width: 102%;
+        height: 95%;
+      });
+
+      .desktop({
+        left: -31px;
+        width: 106%;
+        height: 101%;
+      })
+    }
+  }
+
+  &__image {
+    width: 100%;
+    max-width: 100%;
+    display: block;
+    position: relative;
+  }
+}

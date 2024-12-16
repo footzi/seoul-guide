@@ -1,22 +1,15 @@
 @import '@/styles';
 
 .price {
-  padding-top: 78px;
+  padding-top: 86px;
 
   .tablet({
-    padding-top: 113px;
+    padding-top: 89px;
   });
 
   .desktop({
-      padding-top: 135px;
+      padding-top: 177px;
     });
-
-  &__title {
-    .text-size-3();
-    font-weight: 500;
-    text-align: center;
-    text-transform: uppercase;
-  }
 
   &__container {
     .grid();
@@ -28,9 +21,8 @@
     .col(22, 2);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
     border-radius: 11px;
-    margin-top: 32px;
     padding-top: 26px;
-    padding-bottom: 48px;
+    padding-bottom: 39px;
 
     .tablet({
       padding-top: 40px;
@@ -39,7 +31,6 @@
 
     .desktop({
       .col(20, 3);
-      margin-top: 67px;
       padding-top: 37px;
       padding-bottom: 52px;
     });
@@ -51,7 +42,7 @@
     margin-top: 44px;
 
     .tablet({
-      .col(6, 2);
+      .col(7, 2);
       margin-top: -28px;
     });
 
@@ -79,7 +70,7 @@
     text-align: center;
 
     .tablet({
-      .col(16, 8);
+      .col(16, 9);
       text-align: left;
     });
 
@@ -89,15 +80,15 @@
   }
 
   &__guide-description {
-    .text-size-4();
+    .text-size-4-2();
     .col(22, 2);
-    margin-top: 81px;
-    text-align: justify;
+    margin-top: 34px;
+    text-align: center;
 
     .tablet({
-      .col(16, 8);
+      .col(16, 9);
       text-align: left;
-      margin-top: 47px;
+      margin-top: 28px;
     });
 
     .desktop({
@@ -110,10 +101,10 @@
     .col(22, 2);
     .grid();
     align-items: center;
-    margin-top: 27px;
+    margin-top: 47px;
 
     .tablet({
-      margin-top: 71px;
+      margin-top: 38px;
       justify-content: space-between;
     });
 
@@ -130,11 +121,13 @@
     align-items: center;
 
     .tablet({
-      .col(11);
+      .col(6, 8);
+      padding-left: 22px;
     });
 
     .desktop({
-      .col(12, 1);
+      .col(13, 1);
+      padding-left: 0;
     });
 
     b {
@@ -145,6 +138,14 @@
 
   &__guide-value-label {
     .text-size-3();
+
+    .tablet({
+      display: none;
+    });
+
+    .desktop({
+      display: block;
+    });
   }
 
   &__guide-new-price {
@@ -153,11 +154,11 @@
 
   &__guide-left {
     .col(24);
-    margin-top: 46px;
+    margin-top: 36px;
     position: relative;
 
     .tablet({
-      .col(10, 15);
+      .col(11, 15);
       margin-top: 0;
     });
 
@@ -169,6 +170,7 @@
 
   &__guide-button {
     width: 100%;
+    max-width: 260px;
 
     .desktop({
       max-width: 295px;

@@ -24,9 +24,11 @@ section.author#author
 
 
     picture.author__picture
-        //source(srcset="./images/author.webp?v1" media="(min-width: 576px)")
-        source(srcset="./images/temp-author-mobile.jpg?v1" media="(max-width: 575px)")
-        img.author__image(src="./images/temp-author.jpg?v1" alt="" loading="lazy")
+        source(srcset="./images/author.avif?v1" media="(min-width: 576px)")
+        source(srcset="./images/author.webp?v1" media="(min-width: 576px)")
+        source(srcset="./images/author-mobile.avif?v1" media="(max-width: 575px)")
+        source(srcset="./images/author-mobile.webp?v1" media="(max-width: 575px)")
+        img.author__image(src="./images/author.png?v1" alt="" loading="lazy")
 
     p.author__text-ps
         i P.S. Также я являюсь владелицей к-поп магазина, который уже второй год радует кей-поп фанатов альбомами и мерчом, который мы привозим прямо из Кореи. Если вам актуально, заглядывайте к нам:&nbsp;

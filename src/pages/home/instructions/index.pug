@@ -1,15 +1,22 @@
 section.instructions
-    .instructions__content
-        .instructions__text
-            h3.instructions__title <b>В каком виде</b> вы получите путеводитель?
-            i Путеводитель представлен в виде электронной книги в формате pdf.
-            ul
-                li Сразу после оплаты появится ссылка на скачивание.
-                li Также путеводитель будет отправлен вам на электронную почту в течении 24 часов после оплаты.
+    h2.instructions__title Ответы на вопросы
 
-    picture
+    picture.instructions__picture
         source(srcset="./images/instructions.avif?v2" media="(min-width: 576px)")
         source(srcset="./images/instructions.webp?v2" media="(min-width: 576px)")
-        source(srcset="./images/instructions.avif?v2" media="(max-width: 575px)")
-        source(srcset="./images/instructions.webp?v2" media="(max-width: 575px)")
-        img.instructions__image(src="./images/instructions.jpg?v2" alt="" loading="lazy")
+        source(srcset="./images/instructions-mobile.avif?v2" media="(max-width: 575px)")
+        source(srcset="./images/instructions-mobile.webp?v2" media="(max-width: 575px)")
+        img.instructions__image(src="./images/instructions.png?v1" alt="" loading="lazy")
+
+    ul.instructions__list
+        li.instructions__list-item
+            h3 Сколько стоит путеводитель?
+            i Стоимость путеводителя <b>#{CONSTANTS.priceView}р.</b>
+        li.instructions__list-item
+            h3 В каком виде я его получу?
+            i Путеводитель представлен в виде электронной книги в формате pdf. Сразу после оплаты появится ссылка на его скачивание.
+        li.instructions__list-item
+           h3 Что делать, если ссылка не появилась/файл не удалось скачать?
+           i Просто напишите на почту <a href="mailto:#{CONSTANTS.email}" class="link link_theme_inherit">#{CONSTANTS.email}</a>, я вышлю путеводитель вам в ответ.
+
+    p.instructions__more Остались еще вопросы? Смело пишите на эту почту -> <a href="mailto:#{CONSTANTS.email}" class="link link_theme_inherit">#{CONSTANTS.email}</a>

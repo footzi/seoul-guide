@@ -21,7 +21,7 @@ module.exports = (env) => {
       rules: [
         {
           test: /\.pug$/,
-          loader: 'pug-loader',
+          loader: '@webdiscus/pug-loader',
         },
         {
           test: /\.less$/,
@@ -69,7 +69,7 @@ module.exports = (env) => {
       static: {
         directory: path.resolve(__dirname, 'public'),
       },
-      port: '3001',
+      port: '3333',
       hot: true,
       watchFiles: {
         paths: ['src/**/*.pug'],

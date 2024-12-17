@@ -1,7 +1,8 @@
 {
-  "email": "realguide.info@gmail.com",
+  "email": "anmanakova13@gmail.com",
   "domain": "https://dream-guide.ru",
   "vk": "https://vk.com/an_manako",
+  "ddshop": "https://vk.com/daydream_store",
   "sections": {
     "benefits": "/#benefits",
     "author": "/#author",
@@ -17,6 +18,7 @@
   },
   "returnUrl": "https://dream-guide.ru/confirmation.html",
   "price": 1159,
+  "priceView": "1 159",
   "year": 2024,
   "inn": 525634708455,
   "ogrnip": 323784700302952,

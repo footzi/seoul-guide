@@ -3,50 +3,51 @@
 .firstscreen {
   .layout();
   .grid();
-  margin-top: 85px;
-  margin-bottom: 82px;
+  margin-top: 77px;
+  margin-bottom: 54px;
 
   .tablet({
-    margin-top: 117px;
-    margin-bottom: 75px;
+    margin-top: 110px;
+    margin-bottom: 150px;
   });
 
   .desktop({
-    margin-bottom: 187px;
+    margin-bottom: 252px;
   });
 
   &__title {
     .text-size-1();
     .col(24);
     text-align: center;
+    margin-bottom: 0;
 
     .tablet({
       .col(12, 2);
       text-align: left;
       padding-top: 24px;
+      margin-bottom: 36px;
     });
 
     .desktop({
       .col(12, 3);
-      padding-top: 48px;
+      padding-top: 62px;
     });
   }
 
   &__description {
     .text-size-3();
-    .col(18, 4);
+    .col(21, 2);
     text-align: center;
-    margin-top: 45px;
     font-weight: 400;
+    margin-bottom: 14px;
 
     .tablet({
       .col(12, 2);
-      margin-top: 30px;
       text-align: left;
     });
 
     .desktop({
-      .col(12, 3);
+      .col(11, 3);
     });
   }
 
@@ -54,7 +55,8 @@
     .col(16, 5);
     display: flex;
     position: relative;
-    margin-top: 32px;
+    margin-top: 15px;
+    margin-bottom: 53px;
 
     .tablet({
       .col(10, 14);
@@ -81,58 +83,23 @@
     .grid();
     .col(18, 4);
     align-items: flex-start;
-    margin-top: 50px;
+    margin-top: 26px;
 
     .tablet({
       .col(12, 2);
-      margin-top: 50px;
+      margin-top: 28px;
     });
 
     .desktop({
       .col(12, 3);
-      margin-top: 79px;
     });
-
-    i {
-      .text-size-5();
-      display: block;
-      margin-top: 10px;
-      font-weight: 300;
-
-      .desktop({
-        margin-top: 19px;
-      });
-    }
-
-    a {
-      width: 100%;
-    }
   }
 
   &__button {
-    .col(24, 1);
+    width: 260px;
 
-    .tablet({
-      .col(14, 1);
-    });
-
-    //&:nth-child(odd) {
-    //  .desktop({
-    //    .col(12, 1);
-    //  });
-    //}
-    //
-    //&:nth-child(even) {
-    //  margin-top: 40px;
-    //
-    //  .tablet({
-    //    margin-top: 33px;
-    //  });
-    //
-    //  .desktop({
-    //    .col(12, 13);
-    //    margin-top: 0;
-    //  });
-    //}
+    .desktop({
+      width: 290px;
+    })
   }
 }

@@ -5,6 +5,6 @@ ssh -p $DEPLOY_PORT $DEPLOY_URL "
   cd $DEPLOY_FOLDER &&
   git reset --hard origin/master &&
   git pull &&
-  sudo -S yarn &&
-  sudo -S yarn build
+  sudo -S npm ci &&
+  sudo -S npm run build
 "

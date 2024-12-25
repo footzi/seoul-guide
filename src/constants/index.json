@@ -1,8 +1,8 @@
 {
-  "email": "anmanakova13@gmail.com",
+  "email": "info@daydream-store.ru",
   "domain": "https://dream-guide.ru",
   "vk": "https://vk.com/an_manako",
-  "ddshop": "https://vk.com/daydream_store",
+  "ddshop": "https://daydream-store.ru",
   "sections": {
     "benefits": "/#benefits",
     "author": "/#author",
@@ -18,8 +18,8 @@
     "privacyPolicy": "/privacy-policy.html"
   },
   "returnUrl": "https://dream-guide.ru/confirmation.html",
-  "price": 1159,
-  "priceView": "1 159",
+  "price": 1,
+  "priceView": "1",
   "year": 2024,
   "inn": 525634708455,
   "ogrnip": 323784700302952,

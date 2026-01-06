@@ -3,6 +3,7 @@
   "domain": "https://dream-guide.ru",
   "vk": "https://vk.com/an_manako",
   "ddshop": "https://daydream-store.ru",
+  "blog": "https://t.me/me_justlife",
   "sections": {
     "benefits": "/#benefits",
     "author": "/#author",
@@ -18,9 +19,9 @@
     "privacyPolicy": "/privacy-policy.html"
   },
   "returnUrl": "https://dream-guide.ru/confirmation.html",
-  "price": 1390,
-  "priceView": "1 390",
-  "year": 2025,
+  "price": 1890,
+  "priceView": "1 890",
+  "year": 2026,
   "inn": 525634708455,
   "ogrnip": 323784700302952,
   "fio": "Манакова Анна Алексеевна",

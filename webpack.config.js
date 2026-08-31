@@ -1,5 +1,4 @@
 const path = require('path');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
@@ -16,6 +15,7 @@ module.exports = (env) => {
     output: {
       filename: `index.js?v${Date.now()}`,
       path: path.resolve(__dirname, 'dist'),
+      clean: true,
     },
     module: {
       rules: [
@@ -27,6 +27,10 @@ module.exports = (env) => {
           test: /\.less$/,
           use: [isProduction ? MiniCssExtractPlugin.loader : 'style-loader', 'css-loader', 'less-loader'],
         },
+        {
+          test: /\.css$/,
+          use: [isProduction ? MiniCssExtractPlugin.loader : 'style-loader', 'css-loader'],
+        },
       ],
     },
     resolve: {
@@ -36,7 +40,6 @@ module.exports = (env) => {
       },
     },
     plugins: [
-      new CleanWebpackPlugin(),
       new HtmlWebpackPlugin({
         template: path.resolve(__dirname, 'src/pages/home', 'index.pug'),
         filename: './index.html',
@@ -63,13 +66,13 @@ module.exports = (env) => {
       new MiniCssExtractPlugin({
         filename: `index.css?v${Date.now()}`,
       }),
-      new Dotenv(),
+      new Dotenv({ systemvars: true }),
     ],
     devServer: {
       static: {
         directory: path.resolve(__dirname, 'public'),
       },
-      port: '3333',
+      port: 3333,
       hot: true,
       watchFiles: {
         paths: ['src/**/*.pug'],

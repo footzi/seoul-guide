@@ -1,7 +1,7 @@
 import Swiper from 'swiper';
 import { Navigation } from 'swiper/modules';
-import 'swiper/less';
-import 'swiper/less/navigation';
+import 'swiper/css';
+import 'swiper/css/navigation';
 
 export class ReviewsSlider {
   constructor() {

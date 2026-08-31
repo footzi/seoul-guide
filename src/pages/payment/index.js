@@ -57,7 +57,6 @@ export class Payment {
 
       const body = {
         ...this.data,
-        value: CONSTANTS.price,
         returnUrl: CONSTANTS.returnUrl,
       };
 
